@@ -20,6 +20,11 @@ jobs:
         username: paulobntz
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
 
+    - name: Download main compilado
+      uses: actions/download-artifact@v5
+      with:
+        name: programa
+
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
