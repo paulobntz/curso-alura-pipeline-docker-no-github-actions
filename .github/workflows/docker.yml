@@ -19,3 +19,9 @@ jobs:
       with:
         username: paulobntz
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
+
+    - name: Build and push
+      uses: docker/build-push-action@v6
+      with:
+        push: true
+        tags: paulobntz/go_ci:${{ github.ref_name }}
