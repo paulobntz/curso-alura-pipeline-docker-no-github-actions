@@ -34,6 +34,9 @@ jobs:
     - name: Create-DB
       run: docker compose up -d
 
+    - name: Wait for Postgres
+      run: sleep 10
+
     - name: Test
       run: go test -v main_test.go 
       

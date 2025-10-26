@@ -12,13 +12,6 @@ services:
       - postgres-data:/var/lib/postgresql/data
     networks:
       - local-network
-    healthcheck:
-      test: ["CMD", "pg_isready"]
-      interval: 5s
-      timeout: 1s
-      retries: 3
-      start_period: 15s
-      start_interval: 5s
 
   pgadmin:
     container_name: pgadmin
