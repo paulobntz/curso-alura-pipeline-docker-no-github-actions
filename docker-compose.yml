@@ -40,3 +40,5 @@ networks:
 
 volumes:
   postgres-data:
+    name: postgres-data
+    driver: local
